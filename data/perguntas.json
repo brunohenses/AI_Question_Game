@@ -1,0 +1,556 @@
+{
+  "facil": [
+    {
+      "pergunta": "Qual é a capital do Brasil?",
+      "opcoes": ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador", "Belo Horizonte"],
+      "resposta": "Brasília",
+      "dica": "Foi planejada pelo arquiteto Oscar Niemeyer"
+    },
+    {
+      "pergunta": "Quanto é 7 x 8?",
+      "opcoes": ["48", "54", "56", "62", "64"],
+      "resposta": "56",
+      "dica": "É o mesmo que 7 x 7 + 7"
+    },
+    {
+      "pergunta": "Qual é o símbolo químico do oxigênio?",
+      "opcoes": ["Ox", "O2", "O", "Om", "Og"],
+      "resposta": "O",
+      "dica": "É essencial para a respiração"
+    },
+    {
+      "pergunta": "Em que ano começou a Segunda Guerra Mundial?",
+      "opcoes": ["1914", "1939", "1941", "1945", "1950"],
+      "resposta": "1939",
+      "dica": "Iniciou-se com a invasão da Polônia"
+    },
+    {
+      "pergunta": "Qual oceano banha Portugal?",
+      "opcoes": ["Índico", "Pacífico", "Ártico", "Atlântico", "Mediterrâneo"],
+      "resposta": "Atlântico",
+      "dica": "O mesmo que banha o Brasil"
+    },
+    {
+      "pergunta": "Quantos lados tem um quadrado?",
+      "opcoes": ["3", "4", "5", "6", "8"],
+      "resposta": "4",
+      "dica": "Todos de igual comprimento"
+    },
+    {
+      "pergunta": "Quem escreveu 'Os Lusíadas'?",
+      "opcoes": ["Fernando Pessoa", "Eça de Queirós", "Luís de Camões", "José Saramago", "Almeida Garrett"],
+      "resposta": "Luís de Camões",
+      "dica": "A obra celebra as navegações portuguesas"
+    },
+    {
+      "pergunta": "Qual é o planeta mais próximo do Sol?",
+      "opcoes": ["Vênus", "Terra", "Marte", "Júpiter", "Mercúrio"],
+      "resposta": "Mercúrio",
+      "dica": "Também o menor do Sistema Solar"
+    },
+    {
+      "pergunta": "Qual a fórmula da água?",
+      "opcoes": ["CO2", "NaCl", "H2O", "O2", "H2SO4"],
+      "resposta": "H2O",
+      "dica": "Dois átomos de hidrogênio e um de oxigênio"
+    },
+    {
+      "pergunta": "Quem pintou a Mona Lisa?",
+      "opcoes": ["Van Gogh", "Picasso", "Michelangelo", "Rembrandt", "Leonardo da Vinci"],
+      "resposta": "Leonardo da Vinci",
+      "dica": "Artista renascentista italiano"
+    },
+    {
+      "pergunta": "Qual a montanha mais alta do mundo?",
+      "opcoes": ["K2", "Monte Everest", "Kilimanjaro", "Aconcágua", "Matterhorn"],
+      "resposta": "Monte Everest",
+      "dica": "Localizada no Himalaia"
+    },
+    {
+      "pergunta": "Quantos continentes existem?",
+      "opcoes": ["5", "6", "7", "8", "4"],
+      "resposta": "7",
+      "dica": "Incluindo a Antártida"
+    },
+    {
+      "pergunta": "Qual é a capital de Espanha?",
+      "opcoes": ["Barcelona", "Sevilha", "Valência", "Madrid", "Málaga"],
+      "resposta": "Madrid",
+      "dica": "Cidade conhecida pelo time Real Madrid"
+    },
+    {
+      "pergunta": "Quanto é 15% de 100?",
+      "opcoes": ["1.5", "15", "150", "0.15", "25"],
+      "resposta": "15",
+      "dica": "Porcentagem significa 'por cem'"
+    },
+    {
+      "pergunta": "Qual o metal mais condutor de eletricidade?",
+      "opcoes": ["Ouro", "Ferro", "Alumínio", "Cobre", "Prata"],
+      "resposta": "Prata",
+      "dica": "Não é o mais usado por ser caro"
+    },
+    {
+      "pergunta": "Quem foi o primeiro rei de Portugal?",
+      "opcoes": ["D. Dinis", "D. Afonso Henriques", "D. Manuel I", "D. Sebastião", "D. Pedro IV"],
+      "resposta": "D. Afonso Henriques",
+      "dica": "Fundou o reino em 1143"
+    },
+    {
+      "pergunta": "Qual o maior animal terrestre?",
+      "opcoes": ["Urso-polar", "Girafa", "Elefante-africano", "Rinoceronte", "Hipopótamo"],
+      "resposta": "Elefante-africano",
+      "dica": "Pode pesar até 7 toneladas"
+    },
+    {
+      "pergunta": "Quantos minutos há em uma hora?",
+      "opcoes": ["30", "60", "90", "100", "120"],
+      "resposta": "60",
+      "dica": "Base do sistema sexagesimal"
+    },
+    {
+      "pergunta": "Qual o gás mais abundante na atmosfera?",
+      "opcoes": ["Oxigênio", "Hélio", "Dióxido de Carbono", "Hidrogênio", "Nitrogênio"],
+      "resposta": "Nitrogênio",
+      "dica": "Compõe cerca de 78% do ar"
+    },
+    {
+      "pergunta": "Em que cidade fica a Torre Eiffel?",
+      "opcoes": ["Roma", "Londres", "Berlim", "Paris", "Bruxelas"],
+      "resposta": "Paris",
+      "dica": "Capital da França"
+    },
+    {
+      "pergunta": "Qual a fórmula da área do quadrado?",
+      "opcoes": ["Lado x 4", "Lado²", "Base x Altura", "π x raio²", "Base + Altura"],
+      "resposta": "Lado²",
+      "dica": "Multiplica-se o lado por ele mesmo"
+    },
+    {
+      "pergunta": "Quem descobriu o Brasil?",
+      "opcoes": ["Vasco da Gama", "Fernão de Magalhães", "Bartolomeu Dias", "Pedro Álvares Cabral", "Cristóvão Colombo"],
+      "resposta": "Pedro Álvares Cabral",
+      "dica": "Chegou em abril de 1500"
+    },
+    {
+      "pergunta": "Qual o maior órgão do corpo humano?",
+      "opcoes": ["Fígado", "Cérebro", "Pulmão", "Pele", "Intestino"],
+      "resposta": "Pele",
+      "dica": "Protege contra infecções"
+    },
+    {
+      "pergunta": "Quantos planetas existem no Sistema Solar?",
+      "opcoes": ["7", "8", "9", "10", "12"],
+      "resposta": "8",
+      "dica": "Plutão foi reclassificado"
+    },
+    {
+      "pergunta": "Qual a capital de Angola?",
+      "opcoes": ["Luanda", "Huambo", "Benguela", "Lobito", "Lubango"],
+      "resposta": "Luanda",
+      "dica": "Cidade fundada em 1576"
+    },
+    {
+      "pergunta": "Quanto é 9²?",
+      "opcoes": ["18", "27", "72", "81", "99"],
+      "resposta": "81",
+      "dica": "9 multiplicado por ele mesmo"
+    },
+    {
+      "pergunta": "Qual o elemento químico mais abundante no universo?",
+      "opcoes": ["Oxigênio", "Carbono", "Hidrogênio", "Hélio", "Ferro"],
+      "resposta": "Hidrogênio",
+      "dica": "Principal componente das estrelas"
+    },
+    {
+      "pergunta": "Quem foi o primeiro homem no espaço?",
+      "opcoes": ["Neil Armstrong", "Yuri Gagarin", "Alan Shepard", "John Glenn", "Buzz Aldrin"],
+      "resposta": "Yuri Gagarin",
+      "dica": "Cosmonauta soviético em 1961"
+    },
+    {
+      "pergunta": "Qual o rio mais extenso do mundo?",
+      "opcoes": ["Nilo", "Amazonas", "Mississippi", "Danúbio", "Yangtzé"],
+      "resposta": "Amazonas",
+      "dica": "Flui pelo Brasil"
+    },
+    {
+      "pergunta": "Quantos ossos tem o corpo humano adulto?",
+      "opcoes": ["126", "187", "206", "230", "300"],
+      "resposta": "206",
+      "dica": "Bebês têm mais que adultos"
+    }
+  ],
+
+  "media": [
+    {
+      "pergunta": "Qual destes elementos químicos é um gás nobre?",
+      "opcoes": ["Sódio", "Cloro", "Flúor", "Hélio", "Enxofre"],
+      "resposta": "Hélio",
+      "dica": "Usado em balões de festa"
+    },
+    {
+      "pergunta": "Qual tratado pôs fim à Guerra dos Sete Anos?",
+      "opcoes": ["Tratado de Versalhes", "Tratado de Tordesilhas", "Tratado de Paris", "Paz de Vestfália", "Concórdia de Viena"],
+      "resposta": "Tratado de Paris",
+      "dica": "Assinado em 1763"
+    },
+    {
+      "pergunta": "Qual país não faz fronteira com a França?",
+      "opcoes": ["Bélgica", "Suíça", "Áustria", "Alemanha", "Espanha"],
+      "resposta": "Áustria",
+      "dica": "País de língua germânica"
+    },
+    {
+      "pergunta": "Qual destes rios forma parte da fronteira entre Portugal e Espanha?",
+      "opcoes": ["Sado", "Minho", "Vouga", "Zêzere", "Sorraia"],
+      "resposta": "Minho",
+      "dica": "Localizado no extremo norte"
+    },
+    {
+      "pergunta": "Quem escreveu 'Dom Quixote'?",
+      "opcoes": ["Miguel de Cervantes", "Gabriel García Márquez", "Pablo Neruda", "Jorge Luis Borges", "Federico García Lorca"],
+      "resposta": "Miguel de Cervantes",
+      "dica": "Autor espanhol do século XVII"
+    },
+    {
+      "pergunta": "Qual é a fórmula da velocidade média?",
+      "opcoes": ["V = m·a", "V = Δs/Δt", "V = F/m", "V = a·t", "V = P·t"],
+      "resposta": "V = Δs/Δt",
+      "dica": "Relação entre espaço e tempo"
+    },
+    {
+      "pergunta": "Em que ano ocorreu a Revolução dos Cravos em Portugal?",
+      "opcoes": ["1961", "1974", "1980", "1992", "2002"],
+      "resposta": "1974",
+      "dica": "Marca o fim do Estado Novo"
+    },
+    {
+      "pergunta": "Qual destas montanhas pertence aos Alpes?",
+      "opcoes": ["Monte Branco", "Monte Everest", "Kilimanjaro", "Aconcágua", "Monte Fuji"],
+      "resposta": "Monte Branco",
+      "dica": "Mais alta da Europa Ocidental"
+    },
+    {
+      "pergunta": "Qual é o processo de divisão celular que forma gametas?",
+      "opcoes": ["Mitose", "Meiose", "Clivagem", "Gemulação", "Brotamento"],
+      "resposta": "Meiose",
+      "dica": "Reduz o número de cromossomos pela metade"
+    },
+    {
+      "pergunta": "Quem foi o primeiro presidente dos Estados Unidos?",
+      "opcoes": ["Thomas Jefferson", "Benjamin Franklin", "John Adams", "George Washington", "Abraham Lincoln"],
+      "resposta": "George Washington",
+      "dica": "Seu rosto está no Monte Rushmore"
+    },
+    {
+      "pergunta": "Qual oceano tem a maior profundidade média?",
+      "opcoes": ["Atlântico", "Índico", "Ártico", "Pacífico", "Antártico"],
+      "resposta": "Pacífico",
+      "dica": "Contém a Fossa das Marianas"
+    },
+    {
+      "pergunta": "Qual destes países não é membro permanente do Conselho de Segurança da ONU?",
+      "opcoes": ["França", "Reino Unido", "China", "Japão", "Rússia"],
+      "resposta": "Japão",
+      "dica": "País asiático que perdeu a 2ª Guerra"
+    },
+    {
+      "pergunta": "Qual a capital da Austrália?",
+      "opcoes": ["Sydney", "Melbourne", "Canberra", "Perth", "Brisbane"],
+      "resposta": "Canberra",
+      "dica": "Cidade planejada entre Sydney e Melbourne"
+    },
+    {
+      "pergunta": "Quanto é √144?",
+      "opcoes": ["11", "12", "13", "14", "15"],
+      "resposta": "12",
+      "dica": "12 multiplicado por ele mesmo"
+    },
+    {
+      "pergunta": "Qual pintor é conhecido por cortar parte da própria orelha?",
+      "opcoes": ["Pablo Picasso", "Salvador Dalí", "Claude Monet", "Vincent van Gogh", "Edvard Munch"],
+      "resposta": "Vincent van Gogh",
+      "dica": "Autor de 'Noite Estrelada'"
+    },
+    {
+      "pergunta": "Qual destes metais é líquido à temperatura ambiente?",
+      "opcoes": ["Ferro", "Ouro", "Mercúrio", "Cobre", "Alumínio"],
+      "resposta": "Mercúrio",
+      "dica": "Usado em termômetros tradicionais"
+    },
+    {
+      "pergunta": "Qual foi o último rei de Portugal antes da implantação da República?",
+      "opcoes": ["D. Carlos I", "D. Manuel II", "D. Luís I", "D. Pedro V", "D. Miguel I"],
+      "resposta": "D. Manuel II",
+      "dica": "Reinou apenas 2 anos (1908-1910)"
+    },
+    {
+      "pergunta": "Qual é o maior deserto do mundo?",
+      "opcoes": ["Deserto do Saara", "Deserto da Arábia", "Deserto de Gobi", "Antártida", "Deserto do Kalahari"],
+      "resposta": "Antártida",
+      "dica": "Considerado deserto apesar do gelo"
+    },
+    {
+      "pergunta": "Qual a unidade de medida da resistência elétrica?",
+      "opcoes": ["Volt", "Ampere", "Ohm", "Watt", "Joule"],
+      "resposta": "Ohm",
+      "dica": "Representada pela letra grega Ω"
+    },
+    {
+      "pergunta": "Qual destas obras é de Fernando Pessoa?",
+      "opcoes": ["Os Maias", "Mensagem", "Amor de Perdição", "A Cidade e as Serras", "O Delfim"],
+      "resposta": "Mensagem",
+      "dica": "Único livro em português publicado em vida"
+    },
+    {
+      "pergunta": "Em que século ocorreu a Peste Negra na Europa?",
+      "opcoes": ["XII", "XIII", "XIV", "XV", "XVI"],
+      "resposta": "XIV",
+      "dica": "Dizimou cerca de 1/3 da população europeia"
+    },
+    {
+      "pergunta": "Qual país não faz parte da Escandinávia?",
+      "opcoes": ["Suécia", "Noruega", "Dinamarca", "Finlândia", "Islândia"],
+      "resposta": "Finlândia",
+      "dica": "Tem língua de origem diferente"
+    },
+    {
+      "pergunta": "Qual o símbolo químico do potássio?",
+      "opcoes": ["Pt", "P", "Po", "K", "Ka"],
+      "resposta": "K",
+      "dica": "Vem do latim 'kalium'"
+    },
+    {
+      "pergunta": "Quem descobriu o caminho marítimo para a Índia?",
+      "opcoes": ["Cristóvão Colombo", "Fernão de Magalhães", "Bartolomeu Dias", "Vasco da Gama", "Pedro Álvares Cabral"],
+      "resposta": "Vasco da Gama",
+      "dica": "Chegou a Calecute em 1498"
+    },
+    {
+      "pergunta": "Qual a função da clorofila nas plantas?",
+      "opcoes": ["Absorver água", "Proteger contra insetos", "Realizar fotossíntese", "Armazenar nutrientes", "Transportar seiva"],
+      "resposta": "Realizar fotossíntese",
+      "dica": "Pigmento verde"
+    },
+    {
+      "pergunta": "Qual é o menor país do mundo?",
+      "opcoes": ["Mônaco", "Nauru", "Vaticano", "San Marino", "Liechtenstein"],
+      "resposta": "Vaticano",
+      "dica": "Sede da Igreja Católica"
+    },
+    {
+      "pergunta": "Quanto é 5! (fatorial de 5)?",
+      "opcoes": ["25", "60", "100", "120", "150"],
+      "resposta": "120",
+      "dica": "5 × 4 × 3 × 2 × 1"
+    },
+    {
+      "pergunta": "Qual compositor ficou surdo no final da vida?",
+      "opcoes": ["Mozart", "Bach", "Chopin", "Beethoven", "Vivaldi"],
+      "resposta": "Beethoven",
+      "dica": "Autor da Nona Sinfonia"
+    },
+    {
+      "pergunta": "Qual destes NÃO é um tipo de rocha ígnea?",
+      "opcoes": ["Granito", "Basalto", "Mármore", "Obsidiana", "Pedra-pomes"],
+      "resposta": "Mármore",
+      "dica": "É uma rocha metamórfica"
+    },
+    {
+      "pergunta": "Qual a fórmula do Teorema de Pitágoras?",
+      "opcoes": ["a² = b² + c²", "a² = b² - c²", "a² + b² = c²", "a² - b² = c²", "a² + b² + c² = 0"],
+      "resposta": "a² + b² = c²",
+      "dica": "Relaciona catetos e hipotenusa"
+    }
+  ],
+
+  "dificil": [
+    {
+      "pergunta": "Qual fenômeno quântico permite que partículas estejam em múltiplos estados simultaneamente?",
+      "opcoes": ["Entrelaçamento quântico", "Efeito túnel", "Superposição", "Decoerência", "Não-localidade"],
+      "resposta": "Superposição",
+      "dica": "Princípio ilustrado pelo experimento mental do gato de Schrödinger"
+    },
+    {
+      "pergunta": "Quem formulou o Teorema da Incompletude que revolucionou a lógica matemática?",
+      "opcoes": ["Bertrand Russell", "Alan Turing", "Kurt Gödel", "David Hilbert", "Georg Cantor"],
+      "resposta": "Kurt Gödel",
+      "dica": "Matemático austríaco que demonstrou limitações fundamentais dos sistemas formais"
+    },
+    {
+      "pergunta": "Qual tratado estabeleceu a divisão do mundo entre Portugal e Espanha em 1494?",
+      "opcoes": ["Tratado de Zamora", "Tratado de Alcanizes", "Tratado de Tordesilhas", "Tratado de Windsor", "Concórdia de Segóvia"],
+      "resposta": "Tratado de Tordesilhas",
+      "dica": "Linha imaginária a 370 léguas a oeste de Cabo Verde"
+    },
+    {
+      "pergunta": "Qual destas estruturas cerebrais é crucial para a formação de memórias de longo prazo?",
+      "opcoes": ["Amígdala", "Hipotálamo", "Hipocampo", "Córtex pré-frontal", "Cerebelo"],
+      "resposta": "Hipocampo",
+      "dica": "Nome derivado da sua forma semelhante a um cavalo-marinho"
+    },
+    {
+      "pergunta": "Qual equação descreve a relação entre energia e massa na relatividade restrita?",
+      "opcoes": ["E = mc²", "F = ma", "PV = nRT", "ΔG = ΔH - TΔS", "ψ = ψ(x,t)"],
+      "resposta": "E = mc²",
+      "dica": "Famosa fórmula einsteiniana onde c é a velocidade da luz"
+    },
+    {
+      "pergunta": "Quem foi o líder mouro derrotado na Batalha de Ourique (1139)?",
+      "opcoes": ["Al-Mansur", "Yusuf ibn Tashfin", "Ali ibn Yusuf", "Abu-l-Qasim Ahmad", "Muhammed ibn al-Qas"],
+      "resposta": "Ali ibn Yusuf",
+      "dica": "Soberano da dinastia almorávida durante a fundação de Portugal"
+    },
+    {
+      "pergunta": "Qual teorema topológico afirma que 'não se pode pentear uma bola cabeluda sem deixar um redemoinho'?",
+      "opcoes": ["Teorema de Stokes", "Teorema de Borsuk-Ulam", "Teorema da Bola Cabeluda", "Teorema de Banach-Tarski", "Teorema de Poincaré"],
+      "resposta": "Teorema da Bola Cabeluda",
+      "dica": "Ilustra propriedades de campos vetoriais contínuos em esferas"
+    },
+    {
+      "pergunta": "Qual enzima catalisa a fixação de CO₂ no ciclo de Calvin?",
+      "opcoes": ["ATP sintase", "RuBisCO", "PEP carboxilase", "Hexoquinase", "Citocromo c oxidase"],
+      "resposta": "RuBisCO",
+      "dica": "Considerada a proteína mais abundante na Terra"
+    },
+    {
+      "pergunta": "Qual navegador português realizou a primeira circum-navegação comprovada da Terra?",
+      "opcoes": ["Vasco da Gama", "Bartolomeu Dias", "Fernão de Magalhães", "Diogo Cão", "Pedro Álvares Cabral"],
+      "resposta": "Fernão de Magalhães",
+      "dica": "A expedição foi concluída por Juan Sebastián Elcano após sua morte"
+    },
+    {
+      "pergunta": "Qual paradoxo demonstra problemas na teoria dos conjuntos envolvendo o 'conjunto de todos os conjuntos'?",
+      "opcoes": ["Paradoxo de Zenão", "Paradoxo de Russel", "Paradoxo do Gato de Schrödinger", "Paradoxo de Fermi", "Paradoxo de Banach-Tarski"],
+      "resposta": "Paradoxo de Russel",
+      "dica": "Envolve conjuntos que não contêm a si mesmos como elementos"
+    },
+    {
+      "pergunta": "Qual destas batalhas marcou o fim da expansão muçulmana na Europa Ocidental?",
+      "opcoes": ["Batalha de Guadalete", "Batalha de Poitiers", "Batalha de Covadonga", "Batalha de Tours", "Batalha de Las Navas de Tolosa"],
+      "resposta": "Batalha de Tours",
+      "dica": "Ocorreu em 732 entre francos e omíadas"
+    },
+    {
+      "pergunta": "Qual mineral é a principal fonte do elemento tântalo?",
+      "opcoes": ["Bauxita", "Coltan", "Galena", "Hematita", "Magnetita"],
+      "resposta": "Coltan",
+      "dica": "Mineral estratégico usado em eletrônicos, extraído principalmente na RDC"
+    },
+    {
+      "pergunta": "Qual teorema afirma que 'todo mapa plano pode ser colorido com 4 cores'?",
+      "opcoes": ["Teorema das Quatro Cores", "Teorema de Pitágoras", "Teorema de Fermat", "Teorema de Tales", "Teorema Fundamental da Álgebra"],
+      "resposta": "Teorema das Quatro Cores",
+      "dica": "Primeiro grande teorema demonstrado com auxílio computacional"
+    },
+    {
+      "pergunta": "Qual poeta português escreveu 'Mensagem' sob o heterônimo de Fernando Pessoa?",
+      "opcoes": ["Álvaro de Campos", "Ricardo Reis", "Alberto Caeiro", "Fernando Pessoa ele mesmo", "Bernardo Soares"],
+      "resposta": "Fernando Pessoa ele mesmo",
+      "dica": "Único livro em português publicado durante sua vida"
+    },
+    {
+      "pergunta": "Qual conceito da termodinâmica define a direção dos processos espontâneos?",
+      "opcoes": ["Energia interna", "Entalpia", "Entropia", "Energia livre de Gibbs", "Capacidade térmica"],
+      "resposta": "Entropia",
+      "dica": "Segunda lei: tende a aumentar em sistemas isolados"
+    },
+    {
+      "pergunta": "Qual destes tratados pôs fim à Guerra da Restauração portuguesa?",
+      "opcoes": ["Tratado de Lisboa", "Tratado dos Pirenéus", "Tratado de Utrecht", "Tratado de Madrid", "Tratado de Zamora"],
+      "resposta": "Tratado de Lisboa",
+      "dica": "Assinado em 1668, reconheceu a independência de Portugal"
+    },
+    {
+      "pergunta": "Qual estrutura matemática estuda propriedades invariantes sob deformações contínuas?",
+      "opcoes": ["Teoria dos Grupos", "Topologia", "Geometria Diferencial", "Álgebra Linear", "Teoria da Medida"],
+      "resposta": "Topologia",
+      "dica": "O famoso 'donut que se transforma em xícara de café' pertence a esta área"
+    },
+    {
+      "pergunta": "Qual proteína é responsável pela contração muscular?",
+      "opcoes": ["Queratina", "Actina", "Miosina", "Colágeno", "Tubulina"],
+      "resposta": "Miosina",
+      "dica": "Forma pontes cruzadas com filamentos de actina"
+    },
+    {
+      "pergunta": "Qual filósofo português escreveu 'O Desconforto da Civilização'?",
+      "opcoes": ["Agostinho da Silva", "Leonel Cosme", "José Gil", "Eduardo Lourenço", "Vergílio Ferreira"],
+      "resposta": "José Gil",
+      "dica": "Obra que analisa a identidade portuguesa contemporânea"
+    },
+    {
+      "pergunta": "Qual destes é um problema do Milênio do Instituto Clay?",
+      "opcoes": ["Último Teorema de Fermat", "Conjectura de Poincaré", "Teorema de Pitágoras", "Teorema Fundamental do Cálculo", "Hipótese de Goldbach"],
+      "resposta": "Conjectura de Poincaré",
+      "dica": "Resolvido por Grigori Perelman, que recusou o prêmio"
+    },
+    {
+      "pergunta": "Qual navegação astronômica usa a diferença angular entre a Lua e estrelas?",
+      "opcoes": ["Sextante", "Astrolábio", "Método das Distâncias Lunares", "Quadrante", "Circumpolar"],
+      "resposta": "Método das Distâncias Lunares",
+      "dica": "Desenvolvido por John Harrison para determinação da longitude"
+    },
+    {
+      "pergunta": "Qual estado quântico tem resistência elétrica zero abaixo de temperatura crítica?",
+      "opcoes": ["Plasma de quarks-glúons", "Condensado de Bose-Einstein", "Supercondutor", "Superfluido", "Matéria degenerada"],
+      "resposta": "Supercondutor",
+      "dica": "Descoberto por Heike Kamerlingh Onnes em 1911"
+    },
+    {
+      "pergunta": "Qual destes não é um teorema de incompletude de Gödel?",
+      "opcoes": ["Sistemas consistentes não podem provar sua própria consistência", "Verdade matemática não pode ser completamente formalizada", "Aritmética é essencialmente incompleta", "Toda teoria suficientemente expressiva é indecidível", "O contínuo não pode ser bem-ordenado"],
+      "resposta": "O contínuo não pode ser bem-ordenado",
+      "dica": "Esta última afirmação refere-se à teoria dos conjuntos"
+    },
+    {
+      "pergunta": "Qual batalha naval garantiu a independência do Brasil em 1823?",
+      "opcoes": ["Batalha do Riachuelo", "Batalha de Monte Santiago", "Batalha dos Guararapes", "Batalha do Cabo de São Vicente", "Batalha do 4 de Maio"],
+      "resposta": "Batalha do 4 de Maio",
+      "dica": "Comandada por Thomas Cochrane no litoral baiano"
+    },
+    {
+      "pergunta": "Qual conceito da física quântica descreve partículas com spin semi-inteiro?",
+      "opcoes": ["Bósons", "Férmions", "Hádrons", "Léptons", "Quarks"],
+      "resposta": "Férmions",
+      "dica": "Obedecem ao Princípio de Exclusão de Pauli"
+    },
+    {
+      "pergunta": "Qual arquiteto projetou o Mosteiro dos Jerónimos?",
+      "opcoes": ["Diogo de Boitaca", "João de Castilho", "Miguel de Arruda", "Mateus Fernandes", "Filipe Terzi"],
+      "resposta": "Diogo de Boitaca",
+      "dica": "Pioneiro do estilo manuelino, iniciou a obra em 1501"
+    },
+    {
+      "pergunta": "Qual constante matemática é definida como lim(1 + 1/n)^n quando n→∞?",
+      "opcoes": ["π (pi)", "φ (phi)", "e (número de Euler)", "γ (constante de Euler-Mascheroni)", "i (unidade imaginária)"],
+      "resposta": "e (número de Euler)",
+      "dica": "Base dos logaritmos naturais"
+    },
+    {
+      "pergunta": "Qual destes compostos é um complexo de coordenação usado em quimioterapia?",
+      "opcoes": ["Aspirina", "Cisplatina", "Penicilina", "Morfina", "Insulina"],
+      "resposta": "Cisplatina",
+      "dica": "Contém platina e age por ligação ao DNA"
+    },
+    {
+      "pergunta": "Qual tratado estabeleceu a independência de Portugal em 1143?",
+      "opcoes": ["Tratado de Zamora", "Tratado de Alcanizes", "Concórdia de Guimarães", "Paz de Leão", "Tratado de Tui"],
+      "resposta": "Tratado de Zamora",
+      "dica": "Assinado entre D. Afonso Henriques e Afonso VII de Leão"
+    },
+    {
+      "pergunta": "Qual destas equações é a fórmula de Euler para poliedros convexos?",
+      "opcoes": ["V - A + F = 2", "E = mc²", "e^{iπ} + 1 = 0", "F = V - A + 2", "A = V + F - 2"],
+      "resposta": "V - A + F = 2",
+      "dica": "Relação entre vértices (V), arestas (A) e faces (F)"
+    },
+    {
+      "pergunta": "Qual fenômeno óptico explica o brilho azulado em reatores nucleares?",
+      "opcoes": ["Refração", "Difração", "Radiação Cherenkov", "Efeito Compton", "Emissão Raman"],
+      "resposta": "Radiação Cherenkov",
+      "dica": "Ocorre quando partículas viajam mais rápido que a luz no meio"
+    }
+  ]
+}
