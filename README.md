@@ -42,15 +42,29 @@ Este é um jogo estilo “Show do Milhão” que usa a API da OpenAI para criar 
 6. **Estrutura de arquivos**
    ```
    show_do_milhao/
-   ├── .env             # Chave da API (não enviar ao Git)
-   ├── .gitignore       # Ignorar o arquivo .env
-   ├── requirements.txt # Lista de dependências
+   ├── .env
+   ├── README.md
+   ├── requirements.txt
    ├── data/
    │   ├── perguntas.json
-   │   └── cache.json
+   │   ├── cache.json
+   │   └── stats.json
+   ├── ui/
+   │   ├── __init__.py
+   │   ├── menu.py
+   │   ├── game.py
+   │   └── result.py
+   ├── logic/
+   │   ├── __init__.py
+   │   ├── game_logic.py
+   │   ├── question_manager.py
+   │   ├── help_manager.py
+   │   └── api_manager.py
+   ├── config.py
    ├── main.py
-   ├── game_logic.py
-   └── question_manager.py
+   └── tests/
+      ├── test_game_logic.py
+      └── test_question_manager.py
    ```
 
 7. **Execute o jogo**
