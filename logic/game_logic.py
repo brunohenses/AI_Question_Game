@@ -6,7 +6,7 @@ class GameLogic:
     def __init__(self):
         self.qm = QuestionManager()
         self.hm = HelpManager()
-        self.niveis = ['facil'] * 4 + ['media'] * 3 + ['dificil'] * 3
+        self.niveis = ['facil'] * 4 + ['medio'] * 3 + ['dificil'] * 3
         self.perguntas = []
         self.respostas_certas = 0
         self.premios = [100, 200, 300, 500, 1000, 2000, 5000, 10000, 20000, 100000]

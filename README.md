@@ -59,6 +59,7 @@ Este é um jogo estilo “Show do Milhão” que usa a API da OpenAI para criar 
    │   ├── game_logic.py
    │   ├── question_manager.py
    │   ├── help_manager.py
+   │   ├── stats_manager.py
    │   └── api_manager.py
    ├── config.py
    ├── main.py

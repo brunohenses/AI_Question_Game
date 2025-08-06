@@ -4,11 +4,11 @@ import logging
 from pathlib import Path
 from typing import List, Dict
 from config import PERGUNTAS_FILE, CACHE_FILE, STATS_FILE
-from logic.api_manager import ApiManager
+from logic.api_manager import APIManager
 
 class QuestionManager:
     def __init__(self):
-        self.api_manager = ApiManager()
+        self.api = APIManager()
         self.perguntas = {"facil": [], "medio": [], "dificil": []}
         self.cache = {"facil": [], "medio": [], "dificil": []}
         self.usadas = {"facil": [], "medio": [], "dificil": []}
@@ -24,13 +24,18 @@ class QuestionManager:
             logging.warning(f"Erro ao carregar perguntas estáticas: {e}")
         
     def _carregar_cache(self):
+        loaded = {}
         if Path(CACHE_FILE).exists():
             try:
-                with open(CACHE_FILE, "r", encoding="utf-8") as f:
-                    self.cache = json.load(f)
-                    logging.info(f"Cache carregado de {CACHE_FILE}")
+                with open(CACHE_FILE, 'r', encoding='utf-8') as f:
+                    loaded = json.load(f)
             except Exception as e:
                 logging.warning(f"Erro ao carregar cache: {e}")
+
+        # Garante lista para cada nível, mesmo se não vier no JSON
+        for nivel in self.perguntas.keys():
+            self.cache[nivel] = loaded.get(nivel, [])
+        logging.info(f"Cache inicializado para níveis: {list(self.cache.keys())}")
 
     def _salvar_cache(self):
         try:
