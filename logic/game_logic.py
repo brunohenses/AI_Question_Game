@@ -7,50 +7,59 @@ class GameLogic:
         self.qm = QuestionManager()
         self.hm = HelpManager()
         self.niveis = ['facil'] * 4 + ['medio'] * 3 + ['dificil'] * 3
-        self.perguntas = []
+        self.current_index = 0
         self.respostas_certas = 0
-        self.premios = [100, 200, 300, 500, 1000, 2000, 5000, 10000, 20000, 100000]
-        self.pergunta_atual = 0
+        self.premios = [1000, 2000, 5000, 10000, 25000, 50000, 100000, 250000, 500000, 1000000]
+        self.pergunta_atual_obj = None
 
     def iniciar_jogo(self):
-        self.perguntas = [self.qm.obter_pergunta(nivel) for nivel in self.niveis]
-        self.pergunta_atual = 0
+        """Inicia novo jogo resetando estado, criando novos managers."""
+        self.current_index = 0
         self.respostas_certas = 0
-        self.hm.reset()
+        self.pergunta_atual_obj = None
+        self.qm = QuestionManager()
+        self.hm = HelpManager()
         logging.info("Novo jogo iniciado.")
 
-    def obter_pergunta_atual(self):
-        if self.pergunta_atual < len(self.perguntas):
-            return self.perguntas[self.pergunta_atual]
+    def avancar_pergunta(self):
+        """Busca e armazena a próxima pergunta para exibição."""
+        if self.current_index < len(self.niveis):
+            nivel = self.niveis[self.current_index]
+            self.pergunta_atual_obj = self.qm.obter_pergunta(nivel)
+            logging.info(f"Pergunta obtida (nível {nivel}): {self.pergunta_atual_obj['pergunta']}")
+            return self.pergunta_atual_obj
+        self.pergunta_atual_obj = None
         return None
 
     def verificar_resposta(self, resposta_usuario):
-        pergunta = self.obter_pergunta_atual()
+        """Verifica a resposta para a pergunta atualmente armazenada."""
+        pergunta = self.pergunta_atual_obj
         if not pergunta:
             return False, "Jogo finalizado"
 
         correta = pergunta['resposta'].strip().lower() == resposta_usuario.strip().lower()
         if correta:
             self.respostas_certas += 1
-            self.pergunta_atual += 1
+            self.current_index += 1
             logging.info("Resposta correta.")
             return True, "Resposta correta!"
         else:
             logging.info("Resposta errada. Fim de jogo.")
+            # Força fim de jogo
+            self.current_index = len(self.niveis)
             return False, f"Errado! A resposta correta era: {pergunta['resposta']}"
 
-    def usar_ajuda(self, tipo):
-        pergunta = self.obter_pergunta_atual()
-        if not pergunta:
+    def usar_ajuda(self, tipo: str):
+        """Aplica a ajuda solicitada à pergunta atual"""
+        if not self.pergunta_atual_obj:
             return False, "Nenhuma pergunta disponível."
-
-        resultado, mensagem = self.hm.usar_ajuda(tipo, pergunta)
-        if tipo == 'pular' and resultado:
-            self.pergunta_atual += 1
-        return resultado, mensagem
+        ok, resultado = self.hm.usar_ajuda(tipo, self.pergunta_atual_obj)
+        if tipo == 'pular' and ok:
+            self.current_index += 1
+        return ok, resultado
 
     def jogo_finalizado(self):
-        return self.pergunta_atual >= len(self.perguntas)
+        return self.current_index >= len(self.niveis)
 
     def pontuacao_final(self):
         if self.respostas_certas == 0:
@@ -58,4 +67,6 @@ class GameLogic:
         return self.premios[self.respostas_certas - 1]
 
     def ajudas_disponiveis(self):
+        if not self.hm:
+            return {}
         return self.hm.estado_ajudas()

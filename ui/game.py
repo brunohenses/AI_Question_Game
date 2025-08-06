@@ -14,6 +14,7 @@ class GameUI(ttk.Frame):
 
     def _criar_widgets(self):
         self.master.configure(bg='#0d1b2a')
+        
         # Prize display
         self.lbl_premio = ttk.Label(self, text='Prêmio Atual: 0', font=('Arial', 16), bootstyle='info')
         self.lbl_premio.pack(pady=10)
@@ -42,6 +43,7 @@ class GameUI(ttk.Frame):
         self.btn_parar.grid(row=0, column=0, padx=10)
         self.btn_ajuda = ttk.Menubutton(acoes_frame, text='Ajuda', bootstyle='secondary')
         self.menu_ajuda = tk.Menu(self.btn_ajuda, tearoff=0)
+        
         # Adiciona opções de ajuda com índices
         self.menu_ajuda.add_command(label='Dica', command=lambda: self._usar_ajuda('dica'))
         self.menu_ajuda.add_command(label='Pular', command=lambda: self._usar_ajuda('pular'))
@@ -65,17 +67,20 @@ class GameUI(ttk.Frame):
         # Limpa dica da pergunta anterior
         self.lbl_dica.config(text='')
         
-        pergunta = self.game.obter_pergunta_atual()
+        # Solicita nova pergunta
+        pergunta = self.game.avancar_pergunta()
         if not pergunta:
             self._encerrar_jogo(final=True)
             return
 
         # Atualiza prêmio
         self.lbl_premio.config(text=f'Prêmio Atual: {self.game.pontuacao_final()}')
+        
         # Atualiza pergunta e opções
         self.lbl_pergunta.config(text=pergunta['pergunta'])
         for idx, opc in enumerate(pergunta['opcoes']):
             self.btn_opcoes[idx].config(text=opc, state='normal')
+        
         # Atualiza estado de ajudas
         for label in ['Dica', 'Pular', 'Eliminar']:
             state = 'normal'
@@ -91,6 +96,7 @@ class GameUI(ttk.Frame):
         # Impede múltiplas tentativas na mesma pergunta
         for btn in self.btn_opcoes:
             btn.state(['disabled'])
+        
         opc = self.btn_opcoes[idx].cget('text')
         certo, msg = self.game.verificar_resposta(opc)
         self.lbl_status.config(text=msg)

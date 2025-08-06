@@ -15,29 +15,76 @@ class ResultUI(ttk.Frame):
     def criar_widgets(self):
         self.master.configure(bg='#0d1b2a')
 
+        # Título
         titulo = ttk.Label(self, text="Resultado Final", font=("Arial", 24, "bold"), bootstyle="info")
         titulo.pack(pady=10)
 
-        lbl_pontuacao = ttk.Label(
-            self,
-            text=f"Você ganhou: {self.pontuacao}€",
-            font=("Arial", 18),
-            bootstyle="success"
+        # Pontuação
+        score_lbl = ttk.Label(
+            self, text=f"Você ganhou: {self.pontuacao}€",
+            font=("Arial", 18, "bold"), bootstyle="success"
         )
-        lbl_pontuacao.pack(pady=10)
+        score_lbl.pack(pady=10)
 
-        # Exibe estatísticas adicionais, se houver
-        if self.stats:
-            stats_frame = ttk.Labelframe(self, text="Estatísticas do Jogo", bootstyle="secondary")
-            stats_frame.pack(fill='x', pady=10)
-            for chave, valor in self.stats.items():
-                linha = ttk.Frame(stats_frame)
-                linha.pack(fill='x', pady=2)
-                ttk.Label(linha, text=f"{chave}:", width=20, anchor='w').pack(side='left')
-                ttk.Label(linha, text=str(valor), anchor='w').pack(side='left')
+        # Divider
+        sep = ttk.Separator(self, orient='horizontal')
+        sep.pack(fill='x', pady=10)
 
-        btn_novo = ttk.Button(self, text="Jogar Novamente", bootstyle="primary", command=self.voltar_callback)
-        btn_novo.pack(side='left', padx=10, pady=20)
+        # Estatísticas resumidas
+        stats_frame = ttk.Frame(self)
+        stats_frame.pack(fill='x', pady=5)
 
-        btn_sair = ttk.Button(self, text="Sair", bootstyle="danger", command=self.master.quit)
-        btn_sair.pack(side='right', padx=10, pady=20)
+        # Perguntas respondidas
+        perguntas = self.stats.get("Perguntas Respondidas", 0)
+        lbl_perg = ttk.Label(
+            stats_frame, text=f"Perguntas Respondidas: {perguntas}",
+            font=("Arial", 12, "bold")
+        )
+        lbl_perg.pack(anchor='w', pady=2)
+
+        # Ajuda usadas
+        ajudas_usadas = self.stats.get("Ajudas Restantes", {})
+        used = [k.capitalize() for k, available in ajudas_usadas.items() if not available]
+        if used:
+            # Mapeia ícones simples
+            icons = {'Pular': '🏃', 'Dica': '💡', 'Eliminar': '✂️'}
+            lbl_ajudas = ttk.Label(
+                stats_frame,
+                text="Ajudas usadas: " + ", ".join(f"{icons.get(a, '')} {a}" for a in used),
+                font=("Arial", 12, "bold")
+            )
+            lbl_ajudas.pack(anchor='w', pady=2)
+        else:
+            lbl_ajudas = ttk.Label(
+                stats_frame, text="Nenhuma ajuda utilizada.",
+                font=("Arial", 12, "bold")
+            )
+            lbl_ajudas.pack(anchor='w', pady=2)
+
+        # Botões
+        btn_frame = ttk.Frame(self)
+        btn_frame.pack(pady=20)
+
+        btn_novo = ttk.Button(
+            btn_frame, text="Jogar Novamente",
+            bootstyle="primary", command=self.voltar_callback
+        )
+        btn_novo.grid(row=0, column=0, padx=10)
+
+        btn_sair = ttk.Button(
+            btn_frame, text="Sair",
+            bootstyle="danger", command=self.master.quit
+        )
+        btn_sair.grid(row=0, column=1, padx=10)
+
+        # Ajusta background dos filhos
+        for child in self.winfo_children():
+            try:
+                child.configure(background='#0d1b2a')
+            except:
+                pass
+    
+    def destroy(self):
+        # Limpa dica e status antes de descartar
+        super().destroy()
+

@@ -2,7 +2,7 @@ import json
 import random
 import logging
 from pathlib import Path
-from typing import List, Dict
+from typing import Dict
 from config import PERGUNTAS_FILE, CACHE_FILE, STATS_FILE
 from logic.api_manager import APIManager
 
@@ -27,66 +27,56 @@ class QuestionManager:
         loaded = {}
         if Path(CACHE_FILE).exists():
             try:
-                with open(CACHE_FILE, 'r', encoding='utf-8') as f:
-                    loaded = json.load(f)
-            except Exception as e:
-                logging.warning(f"Erro ao carregar cache: {e}")
-
-        # Garante lista para cada nível, mesmo se não vier no JSON
-        for nivel in self.perguntas.keys():
+                loaded = json.load(open(CACHE_FILE, 'r', encoding='utf-8'))
+            except Exception:
+                logging.warning("Cache JSON vazio ou mal formatado.")
+        for nivel in self.cache:
             self.cache[nivel] = loaded.get(nivel, [])
-        logging.info(f"Cache inicializado para níveis: {list(self.cache.keys())}")
 
     def _salvar_cache(self):
         try:
             with open(CACHE_FILE, "w", encoding="utf-8") as f:
                 json.dump(self.cache, f, ensure_ascii=False, indent=2)
-                logging.info(f"Cache salvo em {CACHE_FILE}")
+            logging.info(f"Cache salvo em {CACHE_FILE}")
         except Exception as e:
             logging.error(f"Erro ao salvar cache: {e}")
 
     def obter_pergunta(self, nivel: str) -> Dict:
-        # Retorna uma pergunta do nível especificado. Usa cache, offline ou API. Evita repetição.
-        origem = ""
-        pergunta = None
-
-        # 1. Tenta pegar do cache
-        while self.cache[nivel]:
-            candidata = self.cache[nivel].pop(0)
-            if candidata not in self.usadas[nivel]:
-                pergunta = candidata
-                origem = "cache"
-                break
+        # 0) Se cache para todos os níveis estiver vazio, tenta gerar batch
+        empty = all(len(self.cache[n]) == 0 for n in self.cache)
+        logging.info(f"Cache vazio? {empty} — online? {self.api.online}")
         
-        if origem == "cache":
-            self._salvar_cache()
-        
-        # 2. Se offline ou falhou API, usa pergunta estática (evitando repetição)
-        if not pergunta and (not self.api.online or not pergunta):
-            pool = [q for q in self.perguntas[nivel] if q not in self.usadas[nivel]]
-            if pool:
-                pergunta = random.choice(pool)
-                self.perguntas[nivel].remove(pergunta)  # evitar repetição
-                origem = "estatica"
-
-        # 3. Tenta gerar pela API e salvar no cache
-        if not pergunta and self.api.online:
+        if empty and self.api.online:
+            logging.info("Tentando gerar o lote de perguntas via API...")
+            batch = {}  # garante variável definida
             try:
-                pergunta = self.api.generate_question(nivel)
-                self.cache[nivel].append(pergunta)
+                batch = self.api.generate_batch_questions()
+                logging.info(f"Batch recebido via API: {list(batch.keys())}")
+            except Exception as e:
+                logging.warning(f"Batch via API falhou: {e}")
+            else:
+                # Aplica o batch somente se veio algo
+                for n in self.cache:
+                    self.cache[n] = batch.get(n, [])
                 self._salvar_cache()
-                origem = "api"
-            except Exception:
-                pool = [q for q in self.perguntas[nivel] if q not in self.usadas[nivel]]
-                if pool:
-                    pergunta = random.choice(pool)
-                    self.perguntas[nivel].remove(pergunta)
-                    origem = "fallback"
 
-        if pergunta:
+        # 1) Tenta cache (pop front)
+        if self.cache[nivel]:
+            pergunta = self.cache[nivel].pop(0)
+            self._salvar_cache()
             self.usadas[nivel].append(pergunta)
-            logging.info(f"Pergunta retornada do nível '{nivel}' via {origem}.")
+            logging.info(f"Pergunta '{pergunta['pergunta'][:30]}...' via cache")
             return pergunta
-        else:
-            raise ValueError(f"Nenhuma pergunta disponível para o nível '{nivel}'")
-            
+
+        # 2) Fallback estático
+        disponiveis = [q for q in self.perguntas[nivel] if q not in self.usadas[nivel]]
+        if disponiveis:
+            pergunta = random.choice(disponiveis)
+            self.perguntas[nivel].remove(pergunta)
+            self.usadas[nivel].append(pergunta)
+            logging.info(f"Pergunta '{pergunta['pergunta'][:30]}...' via estática")
+            return pergunta
+
+        # Se nada disponível
+        raise ValueError(f"Nenhuma pergunta disponível para nível '{nivel}'")
+                

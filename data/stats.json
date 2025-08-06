@@ -1,0 +1,142 @@
+[
+  {
+    "timestamp": "2025-08-06T09:43:38.435992",
+    "perguntas_respondidas": 6,
+    "ajudas_usadas": {
+      "pular": true,
+      "dica": true,
+      "eliminar": true
+    },
+    "pontuacao": 2000
+  },
+  {
+    "timestamp": "2025-08-06T09:44:50.182531",
+    "perguntas_respondidas": 3,
+    "ajudas_usadas": {
+      "pular": false,
+      "dica": false,
+      "eliminar": false
+    },
+    "pontuacao": 300
+  },
+  {
+    "timestamp": "2025-08-06T09:50:16.007764",
+    "perguntas_respondidas": 9,
+    "ajudas_usadas": {
+      "pular": false,
+      "dica": false,
+      "eliminar": false
+    },
+    "pontuacao": 20000
+  },
+  {
+    "timestamp": "2025-08-06T09:56:16.290295",
+    "perguntas_respondidas": 0,
+    "ajudas_usadas": {
+      "pular": false,
+      "dica": false,
+      "eliminar": false
+    },
+    "pontuacao": 0
+  },
+  {
+    "timestamp": "2025-08-06T10:05:26.567779",
+    "perguntas_respondidas": 0,
+    "ajudas_usadas": {
+      "pular": false,
+      "dica": false,
+      "eliminar": false
+    },
+    "pontuacao": 0
+  },
+  {
+    "timestamp": "2025-08-06T10:09:47.763597",
+    "perguntas_respondidas": 0,
+    "ajudas_usadas": {
+      "pular": false,
+      "dica": false,
+      "eliminar": false
+    },
+    "pontuacao": 0
+  },
+  {
+    "timestamp": "2025-08-06T10:13:39.222823",
+    "perguntas_respondidas": 0,
+    "ajudas_usadas": {
+      "pular": false,
+      "dica": false,
+      "eliminar": false
+    },
+    "pontuacao": 0
+  },
+  {
+    "timestamp": "2025-08-06T10:14:43.448147",
+    "perguntas_respondidas": 1,
+    "ajudas_usadas": {
+      "pular": false,
+      "dica": false,
+      "eliminar": false
+    },
+    "pontuacao": 100
+  },
+  {
+    "timestamp": "2025-08-06T10:21:42.962263",
+    "perguntas_respondidas": 0,
+    "ajudas_usadas": {
+      "pular": false,
+      "dica": false,
+      "eliminar": false
+    },
+    "pontuacao": 0
+  },
+  {
+    "timestamp": "2025-08-06T10:34:26.333375",
+    "perguntas_respondidas": 0,
+    "ajudas_usadas": {
+      "pular": false,
+      "dica": false,
+      "eliminar": false
+    },
+    "pontuacao": 0
+  },
+  {
+    "timestamp": "2025-08-06T11:15:55.015074",
+    "perguntas_respondidas": 5,
+    "ajudas_usadas": {
+      "pular": true,
+      "dica": true,
+      "eliminar": false
+    },
+    "pontuacao": 10000
+  },
+  {
+    "timestamp": "2025-08-06T11:49:28.232711",
+    "perguntas_respondidas": 0,
+    "ajudas_usadas": {
+      "pular": false,
+      "dica": false,
+      "eliminar": false
+    },
+    "pontuacao": 0
+  },
+  {
+    "timestamp": "2025-08-06T11:49:44.917036",
+    "perguntas_respondidas": 1,
+    "ajudas_usadas": {
+      "pular": false,
+      "dica": false,
+      "eliminar": false
+    },
+    "pontuacao": 1000
+  },
+  {
+    "timestamp": "2025-08-06T12:06:33.412528",
+    "perguntas_respondidas": 3,
+    "ajudas_usadas": {
+      "pular": false,
+      "dica": false,
+      "eliminar": true
+    },
+    "pontuacao": 5000
+  }
+]
