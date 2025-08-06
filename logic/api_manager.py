@@ -36,26 +36,36 @@ class APIManager:
                     "RETORNE SOMENTE O JSON VALIDO, sem texto adicional."
                 )
         response = openai.chat.completions.create(
-                    model=OPENAI_MODEL,
-                    messages=[
-                        {"role": "system", "content": "Você é um gerador de perguntas de quiz."},
-                        {"role": "user",   "content": prompt}
-                    ],
-                    temperature=OPENAI_TEMPERATURE,
-                    max_tokens=OPENAI_MAX_TOKENS * 3  # permite resposta maior
-                )
+            model=OPENAI_MODEL,
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "Você é um gerador de perguntas de quiz para o jogo 'Show do Milhão'. "
+                        "Sempre responda EXCLUSIVAMENTE com JSON válido, sem nenhum texto explicativo ou blocos de código Markdown. "
+                        "O JSON deve ter exatamente as chaves 'pergunta', 'opcoes', 'resposta' e 'dica'."
+                    )
+                },
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ],
+            temperature=OPENAI_TEMPERATURE,
+            max_tokens=2000
+            )
+
         content = response.choices[0].message.content.strip()
             
-        # Se vier com blocos de código ```json ... ```
-        if content.startswith("```json") and content.endswith("```"):
-            # Retira as três crases e a indicação json
-            content = content[len("```json"): -3].strip()
-        elif content.startswith("```") and content.endswith("```"):
-            content = content[3:-3].strip()
+        # Remove blocos de código (```json … ```)
+        if "}" in content:
+            content = content[: content.rfind("}") + 1]
 
-        # Agora sim parseie como JSON
         try:
-            question_dict = json.loads(content)
-        except json.JSONDecodeError:
-            logging.error(f"Conteúdo inválido da API (pergunta): {content!r}")
-            raise RuntimeError("Resposta da API não é um JSON válido")
+            batch = json.loads(content)
+        except json.JSONDecodeError as e:
+            logging.error(f"Conteúdo inválido da API (batch truncado?): {content!r}")
+            raise RuntimeError("Resposta da API não é JSON válido (talvez truncada)")
+        
+        logging.info(f"Batch recebido via API: chaves {list(batch.keys())}")
+        return batch

@@ -138,5 +138,25 @@
       "eliminar": true
     },
     "pontuacao": 5000
+  },
+  {
+    "timestamp": "2025-08-06T12:14:37.714806",
+    "perguntas_respondidas": 1,
+    "ajudas_usadas": {
+      "pular": true,
+      "dica": true,
+      "eliminar": false
+    },
+    "pontuacao": 1000
+  },
+  {
+    "timestamp": "2025-08-06T12:29:02.631756",
+    "perguntas_respondidas": 10,
+    "ajudas_usadas": {
+      "pular": false,
+      "dica": true,
+      "eliminar": false
+    },
+    "pontuacao": 1000000
   }
 ]
